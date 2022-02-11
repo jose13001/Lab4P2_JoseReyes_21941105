@@ -9,6 +9,15 @@ package lab4p2_josereyes_21941105;
  *
  * @author josec
  */
-public class SuperGranjero {
+public class SuperGranjero extends Aldeanos{
+
+    public SuperGranjero() {
+    }
+
+    public SuperGranjero(String nombre, String Apellido, int Edad, int vida) {
+        super(nombre, Apellido, Edad, vida);
+        vida=1000;
+        ataque=1000;
+    }
     
 }

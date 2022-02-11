@@ -5,6 +5,7 @@
  */
 package lab4p2_josereyes_21941105;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -12,9 +13,12 @@ import java.util.Scanner;
  * @author josec
  */
 public class Lab4P2_JoseReyes_21941105 {
+    static ArrayList<Familias> Familia =new ArrayList();
 
     
     public static void main(String[] args) {
+        Familia.add(new Familias("Montesco"));
+        
         Scanner lea =new Scanner(System.in);
         System.out.println("******MENU******");
         System.out.println("0. Salir");

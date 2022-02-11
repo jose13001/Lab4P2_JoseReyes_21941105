@@ -5,10 +5,22 @@
  */
 package lab4p2_josereyes_21941105;
 
+import java.util.Random;
+
 /**
  *
  * @author josec
  */
-public class Herrero {
+public class Herrero extends Aldeanos{
+    Random d =new Random();
+
+    public Herrero() {
+    }
+
+    public Herrero(String nombre, String Apellido, int Edad, int vida) {
+        super(nombre, Apellido, Edad, vida);
+        vida+=vida*50/100;
+        ataque = d.nextInt(500-200)+200;
+    }
     
 }

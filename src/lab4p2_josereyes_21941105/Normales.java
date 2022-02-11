@@ -9,6 +9,18 @@ package lab4p2_josereyes_21941105;
  *
  * @author josec
  */
-public class Normales {
+public class Normales extends Aldeanos {
+
+    public Normales() {
+    }
+
+    public Normales(String nombre, String Apellido, int Edad, int vida) {
+        super(nombre, Apellido, Edad, vida);
+        ataque=50;
+    }
+    
+
+    
+    
     
 }

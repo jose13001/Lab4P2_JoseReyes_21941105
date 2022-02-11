@@ -9,6 +9,15 @@ package lab4p2_josereyes_21941105;
  *
  * @author josec
  */
-public class Agronomo {
+public class Agronomo extends Aldeanos{
+
+    public Agronomo() {
+    }
+
+    public Agronomo(String nombre, String Apellido, int Edad, int vida) {
+        super(nombre, Apellido, Edad, vida);
+        ataque=100;
+    }
+    
     
 }

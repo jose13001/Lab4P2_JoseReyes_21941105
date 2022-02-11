@@ -9,6 +9,17 @@ package lab4p2_josereyes_21941105;
  *
  * @author josec
  */
-public class Pacifistas {
+public class Pacifistas extends Aldeanos{
+    String discurso;
+
+    public Pacifistas() {
+    }
+
+    public Pacifistas(String nombre, String Apellido, int Edad, int vida) {
+        super(nombre, Apellido, Edad, vida);
+        ataque=0;
+        discurso = "Pelear es malo >:( ";
+    }
+    
     
 }

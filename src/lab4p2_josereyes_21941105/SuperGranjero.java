@@ -15,9 +15,13 @@ public class SuperGranjero extends Aldeanos{
     }
 
     public SuperGranjero(String nombre, String Apellido, int Edad, int vida) {
-        super(nombre, Apellido, Edad, vida);
-        vida=1000;
+        super(nombre, Apellido, Edad, 1000);        
         ataque=1000;
+    }
+    
+    @Override
+    public String toString(){
+        return super.toString()+", ataque: "+ ataque;
     }
     
 }

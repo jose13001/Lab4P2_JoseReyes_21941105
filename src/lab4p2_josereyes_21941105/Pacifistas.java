@@ -20,6 +20,9 @@ public class Pacifistas extends Aldeanos{
         ataque=0;
         discurso = "Pelear es malo >:( ";
     }
-    
+     @Override
+    public String toString(){
+        return super.toString()+", ataque: "+ ataque;
+    }
     
 }

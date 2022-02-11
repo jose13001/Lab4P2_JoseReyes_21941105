@@ -19,6 +19,11 @@ public class Normales extends Aldeanos {
         ataque=50;
     }
     
+     @Override
+    public String toString(){
+        return super.toString()+", ataque: "+ ataque;
+    }
+    
 
     
     

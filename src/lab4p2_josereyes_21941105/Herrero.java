@@ -22,5 +22,8 @@ public class Herrero extends Aldeanos{
         vida+=vida*50/100;
         ataque = d.nextInt(500-200)+200;
     }
-    
+     @Override
+    public String toString(){
+        return super.toString()+", ataque: "+ ataque;
+    }
 }

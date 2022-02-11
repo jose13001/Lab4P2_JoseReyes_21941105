@@ -18,6 +18,9 @@ public class Agronomo extends Aldeanos{
         super(nombre, Apellido, Edad, vida);
         ataque=100;
     }
-    
+     @Override
+    public String toString(){
+        return super.toString()+", ataque: "+ ataque;
+    }
     
 }

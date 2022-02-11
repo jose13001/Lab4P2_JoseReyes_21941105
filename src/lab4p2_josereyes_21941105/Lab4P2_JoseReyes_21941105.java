@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @author josec
  */
 public class Lab4P2_JoseReyes_21941105 {
-    static ArrayList<Familias> Familia =new ArrayList();
+    static ArrayList<Familias> familia =new ArrayList();
     static Scanner lea =new Scanner(System.in);
     
     public static void main(String[] args) {
@@ -60,13 +60,13 @@ public class Lab4P2_JoseReyes_21941105 {
     public static boolean CrearFamilia(){
         System.out.print("Ingrese apellido: ");
         String apellido = lea.nextLine();
-        for (Familias fam :Familia){
+        for (Familias fam :familia){
             if (fam.apellido.equals(apellido)){
                 System.out.println("Esta familia ya existe");
                 return false;
             }
         }
-        Familia.add(new Familias(apellido));
+        familia.add(new Familias(apellido));
         return true;
     }
     

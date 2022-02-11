@@ -20,7 +20,7 @@ public class Agronomo extends Aldeanos{
     }
      @Override
     public String toString(){
-        return super.toString()+", ataque: "+ ataque;
+        return super.toString()+", ataque: "+ ataque+"Tipo= Agronomo ]";
     }
     
 }

@@ -22,7 +22,7 @@ public class Pacifistas extends Aldeanos{
     }
      @Override
     public String toString(){
-        return super.toString()+", ataque: "+ ataque;
+        return super.toString()+", ataque: "+ ataque+"Tipo= Pacifista ]";
     }
     
 }

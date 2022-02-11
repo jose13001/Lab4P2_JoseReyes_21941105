@@ -12,35 +12,22 @@ import java.util.ArrayList;
  * @author josec
  */
 public class Familias {
-    ArrayList<Aldeanos>Aldeanos = new ArrayList();
+    ArrayList<Aldeanos>aldeanos;
     String apellido;
-    
-    public Familias(){}
 
     public Familias(String apellido) {
         this.apellido = apellido;
-    }
-
-    public ArrayList<Aldeanos> getAldeanos() {
-        return Aldeanos;
-    }
-
-    public void setAldeanos(Aldeanos agg) {
-        this.Aldeanos.add(agg);
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+        aldeanos =new ArrayList <Aldeanos>();
     }
 
     @Override
     public String toString() {
-        return "Familias{" + "Aldeanos=" + Aldeanos + ", apellido=" + apellido + '}';
+        return "Familias{" + "aldeanos=" + aldeanos + ", apellido=" + apellido + '}';
     }
+    
+    
+
+    
     
     
 }

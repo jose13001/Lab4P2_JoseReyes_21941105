@@ -60,7 +60,7 @@ public class Aldeanos {
 
     @Override
     public String toString() {
-        return "Aldeanos{" + "nombre=" + nombre + ", Apellido=" + Apellido + '}';
+        return "Aldeanos{" + "nombre=" + nombre + ", Apellido=" + Apellido +", Edad=" + Edad + ", vida=" + vida+ '}';
     }
     
 }

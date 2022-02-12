@@ -6,6 +6,7 @@
 package lab4p2_josereyes_21941105;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
@@ -54,6 +55,8 @@ public class Lab4P2_JoseReyes_21941105 {
             break;
             
             case 4: 
+                System.out.println("****Pelea****");
+                Pelear();
             break;
         }
         
@@ -130,7 +133,37 @@ public class Lab4P2_JoseReyes_21941105 {
         System.out.println("La familia "+ apellido+" no existe");
        return false; 
     }
+     public static Familias buscarFamilias(String apellido){
+        for (Familias fam: familia){
+            if(fam.apellido.equals(apellido)){
+                return fam;
+            }
+            
+        }
+        return null;
+    }
     
+    public static void Pelear(){
+        System.out.println("Ingrese el apellido de la familia contricante: ");
+        String apellido=lea.next();
+        Familias contrincante = buscarFamilias(apellido);
+        Familias montesco = buscarFamilias("Montesco");
+         if (contrincante!=null && contrincante.aldeanos.size()>=1){
+            System.out.println("Montesco vs. "+apellido);
+            Collections.shuffle(contrincante.aldeanos);
+            Collections.shuffle(montesco.aldeanos);
+            int x=0,y=0;
+            while(contrincante.aldeanos.size()>0 && montesco.aldeanos.size()>0){
+                Aldeanos Contrincante = contrincante.aldeanos.get(x);
+                Aldeanos Montesco = montesco.aldeanos.get(y);
+                
+                
+                
+            }
+            
+        }
+        
+    }
     
     
 }

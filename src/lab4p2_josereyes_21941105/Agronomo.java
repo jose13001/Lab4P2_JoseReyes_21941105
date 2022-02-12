@@ -22,5 +22,14 @@ public class Agronomo extends Aldeanos{
     public String toString(){
         return super.toString()+", ataque: "+ ataque+"Tipo= Agronomo ]";
     }
+    @Override
+     public int Ataque(Aldeanos atacar){
+        if(atacar instanceof Normales){
+            return(int)Math.round(ataque*1.1);
+        }else if(atacar instanceof Pacifistas){
+            return(int)Math.round(ataque*1.05);
+        }
+        return ataque;
+    }
     
 }

@@ -26,4 +26,14 @@ public class Herrero extends Aldeanos{
     public String toString(){
         return super.toString()+", ataque: "+ ataque+"Tipo= Herrero ]";
     }
+    @Override
+     public int Ataque(Aldeanos atacar){
+        if(atacar instanceof Agronomo){
+            return(int)Math.round(ataque*1.1);
+        }else if(atacar instanceof Pacifistas){
+            return(int)Math.round(ataque*1.05);
+        }
+        return ataque;
+    }
+     
 }

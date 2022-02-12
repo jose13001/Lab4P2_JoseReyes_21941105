@@ -9,7 +9,7 @@ package lab4p2_josereyes_21941105;
  *
  * @author josec
  */
-public class Aldeanos {
+public abstract class Aldeanos {
     public String nombre;
     public String Apellido;
     public int Edad;
@@ -63,4 +63,5 @@ public class Aldeanos {
         return "Aldeanos{" + "nombre=" + nombre + ", Apellido=" + Apellido +", Edad=" + Edad + ", vida=" + vida+ '}';
     }
     
+    public abstract int Ataque(Aldeanos atacar);
 }

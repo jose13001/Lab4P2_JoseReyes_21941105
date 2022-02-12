@@ -24,6 +24,13 @@ public class Normales extends Aldeanos {
         return super.toString()+", ataque: "+ ataque+"Tipo= Normal ]";
     }
     
+    @Override
+    public int Ataque(Aldeanos atacar){
+        if(atacar instanceof Pacifistas){
+            return(int)Math.round(ataque*1.05);
+        }
+        return ataque;
+    }
 
     
     

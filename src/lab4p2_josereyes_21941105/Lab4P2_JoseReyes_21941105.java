@@ -101,8 +101,8 @@ public class Lab4P2_JoseReyes_21941105 {
         String apellido = lea.next();
         System.out.print("Ingrese edad: ");
         int edad = lea.nextInt();
-        System.out.print("Ingrese puntos de vida: ");
-        int puntosVida = lea.nextInt();
+        System.out.print("Ingrese la vida: ");
+        int vida = lea.nextInt();
         for (Familias fam :familia){
             if (fam.apellido.equals(apellido)){
                 System.out.println("1 - Normal\n2 - Pacifista\n3 - Herrero\n4 - Agrónomo\n5 - Explosivo");
@@ -111,19 +111,19 @@ public class Lab4P2_JoseReyes_21941105 {
                 
                 switch(tipo){
                     case 1:
-                        fam.aldeanos.add(new Normales (nombre, apellido, edad, puntosVida));
+                        fam.aldeanos.add(new Normales (nombre, apellido, edad, vida));
                         break;
                     case 2:
-                        fam.aldeanos.add(new Pacifistas (nombre, apellido, edad, puntosVida));
+                        fam.aldeanos.add(new Pacifistas (nombre, apellido, edad, vida));
                         break;
                     case 3:
-                        fam.aldeanos.add(new Herrero (nombre, apellido, edad, puntosVida));
+                        fam.aldeanos.add(new Herrero (nombre, apellido, edad, vida));
                         break;
                     case 4:
-                        fam.aldeanos.add(new Agronomo (nombre, apellido, edad, puntosVida));
+                        fam.aldeanos.add(new Agronomo (nombre, apellido, edad, vida));
                         break;
                     case 5:
-                        fam.aldeanos.add(new Explosivo (nombre, apellido, edad, puntosVida));
+                        fam.aldeanos.add(new Explosivo (nombre, apellido, edad, vida));
                         break;
                 }
                 System.out.println("***************");
@@ -144,24 +144,42 @@ public class Lab4P2_JoseReyes_21941105 {
     }
     
     public static void Pelear(){
-        System.out.println("Ingrese el apellido de la familia contricante: ");
+        System.out.println("Ingrese el apellido de la familia Rival: ");
         String apellido=lea.next();
-        Familias contrincante = buscarFamilias(apellido);
+        Familias rival = buscarFamilias(apellido);
         Familias montesco = buscarFamilias("Montesco");
-         if (contrincante!=null && contrincante.aldeanos.size()>=1){
+         if (rival!=null && rival.aldeanos.size()>=1){
             System.out.println("Montesco vs. "+apellido);
-            Collections.shuffle(contrincante.aldeanos);
+            Collections.shuffle(rival.aldeanos);
             Collections.shuffle(montesco.aldeanos);
             int x=0,y=0;
-            while(contrincante.aldeanos.size()>0 && montesco.aldeanos.size()>0){
-                Aldeanos Contrincante = contrincante.aldeanos.get(x);
+            while(rival.aldeanos.size()>0 && montesco.aldeanos.size()>0){
+                Aldeanos Rival = rival.aldeanos.get(x);
                 Aldeanos Montesco = montesco.aldeanos.get(y);
                 
-                while(Contrincante.vida>0 && Montesco.vida>0){
-                    int ataque=Montesco.Ataque(Contrincante);
+                while(Rival.vida>0 && Montesco.vida>0){
+                    int ataque=Montesco.Ataque(Rival);
                     if(ataque !=0){
+                        Rival.vida-=ataque;
+                        System.out.println(Montesco.nombre+" ha atacado a "+Rival.nombre+" haciendole "
+                        + ataque+ " de damage dejandolo con "+Rival.vida+"de vida.");
+                    }
+                    ataque = Rival.Ataque(Montesco);
+                    if(ataque !=0){
+                        Montesco.vida-=ataque;
+                        System.out.println(Rival.nombre+" ha atacado a "+Montesco.nombre+" haciendole "
+                        + ataque+ " de damage dejandolo con "+Montesco.vida+" de vida.");
                         
                     }
+                }
+                if(Rival.vida<0){
+                    System.out.println(Montesco.nombre+" !HA GANADO LA PELEA! ");
+                    rival.aldeanos.remove((rival.aldeanos.indexOf(Rival)));
+                    x++;
+                }
+                else if (Montesco.vida<0){
+                    System.out.println(Rival.nombre+" Ha ganado la pelea :( ");
+                    montesco.aldeanos.remove((montesco.aldeanos.indexOf(Montesco)));
                 }
                 
                 

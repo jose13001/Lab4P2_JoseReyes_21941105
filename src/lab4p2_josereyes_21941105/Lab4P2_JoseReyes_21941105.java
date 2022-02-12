@@ -157,6 +157,12 @@ public class Lab4P2_JoseReyes_21941105 {
                 Aldeanos Contrincante = contrincante.aldeanos.get(x);
                 Aldeanos Montesco = montesco.aldeanos.get(y);
                 
+                while(Contrincante.vida>0 && Montesco.vida>0){
+                    int ataque=Montesco.Ataque(Contrincante);
+                    if(ataque !=0){
+                        
+                    }
+                }
                 
                 
             }
